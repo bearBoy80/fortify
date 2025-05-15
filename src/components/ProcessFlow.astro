@@ -1,0 +1,99 @@
+---
+const steps = [
+	{
+		number: "01",
+		title: "Initial Security Assessment",
+		description:
+			"We begin with a comprehensive analysis of your current security posture to identify vulnerabilities and areas for improvement.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+    </svg>`,
+	},
+	{
+		number: "02",
+		title: "Tailored Implementation",
+		description:
+			"Based on your assessment, we deploy a customized security solution designed specifically for your organization's needs and infrastructure.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>`,
+	},
+	{
+		number: "03",
+		title: "Continuous Monitoring",
+		description:
+			"Our systems monitor your digital environment 24/7, detecting potential threats and analyzing patterns to identify security risks in real-time.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>`,
+	},
+	{
+		number: "04",
+		title: "Automated Response",
+		description:
+			"When a threat is detected, our system automatically implements containment strategies to mitigate risk and protect your sensitive data.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>`,
+	},
+	{
+		number: "05",
+		title: "Regular Reporting",
+		description:
+			"Receive detailed reports on security events, threats detected, and overall system performance with actionable insights for improvement.",
+		icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>`,
+	},
+];
+---
+<div class="py-32 bg-white" id="how-it-works">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-20">
+      <div class="inline-block px-6 py-2 bg-primary-100 text-primary-600 rounded-full mb-4">
+        Our Process
+      </div>
+      <h2 class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
+        How We Protect Your Data
+      </h2>
+      <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+        Our comprehensive approach to security ensures your data is protected at every step,
+        from initial assessment to ongoing monitoring and response.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Connection Line -->
+      <div class="hidden lg:block absolute top-24 left-1/2 h-[calc(100%-96px)] w-1 bg-gradient-to-b from-primary-300 to-secondary-300 rounded-full transform -translate-x-1/2 z-0"></div>
+      
+      <div class="space-y-16 relative z-10">
+        {steps.map((step, index) => (
+          <div class={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+            <div class="flex-1 order-2 lg:order-none">
+              <div class={`bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 ${index % 2 === 0 ? 'lg:mr-8' : 'lg:ml-8'}`}>
+                <div class="flex items-center mb-4">
+                  <div class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl font-bold h-12 w-12 rounded-full flex items-center justify-center mr-4">
+                    {step.number}
+                  </div>
+                  <h3 class="text-2xl font-bold">{step.title}</h3>
+                </div>
+                <p class="text-gray-600">{step.description}</p>
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 order-1 lg:order-none">
+              <div class="w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center z-20 relative">
+                <div class="text-primary-500">
+                  <Fragment set:html={step.icon} />
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex-1 hidden lg:block"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
