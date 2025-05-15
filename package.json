@@ -12,6 +12,7 @@
 		"format": "biome format --write ."
 	},
 	"dependencies": {
+		"@astrojs/netlify": "^6.3.3",
 		"@astrojs/tailwind": "^5.1.0",
 		"astro": "^5.2.5",
 		"daisyui": "^4.7.2",
